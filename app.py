@@ -46,4 +46,20 @@ print(type({'name':'Asabeneh'})) # Dictionary
 print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 
+#Exercise_Day1
+#level1
 print("My name is Thiên")
+print("My family name is Bach")
+print("My country is VietNam")
+print("I am enjoying 30 days of python")
+
+print(type(10))
+print(type(9.8))
+print(type(3.14))
+print(type(4-4j))
+print(type(['Asabeneh', 'Python','Finland']))
+print(type('Thien'))
+print(type('Bach'))
+print(type('VietNam'))
+
+
