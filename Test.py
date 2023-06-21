@@ -8,3 +8,5 @@ print(a.Address) # Chọn mục tiêu dự đoán (địa chỉ)
 melbourne_features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude']
 print(a[melbourne_features].describe()) # Lựa chọn các tính năng (Các cột được nhập vào sau đó được sử dụng để đưa ra dự đoán)
 print(a[melbourne_features].head())
+# print(a.Price) == print(a['Price'])
+
