@@ -1,0 +1,37 @@
+Đọc và ghi dữ liệu:
+
+Đọc dữ liệu từ file CSV: pd.read_csv('filename.csv')
+Ghi dữ liệu ra file CSV: df.to_csv('filename.csv', index=False)
+Khám phá dữ liệu:
+
+Xem các hàng đầu tiên của DataFrame: df.head()
+Xem các hàng cuối cùng của DataFrame: df.tail()
+Xem thông tin về DataFrame: df.info()
+Xem các thống kê mô tả của DataFrame: df.describe()
+Xem số hàng và cột trong DataFrame: df.shape
+Xem tên các cột trong DataFrame: df.columns
+Truy cập vào một cột cụ thể: df['column_name'] hoặc df.column_name
+Xử lý dữ liệu:
+
+Loại bỏ các hàng có giá trị NaN: df.dropna()
+Thay thế các giá trị NaN bằng giá trị khác: df.fillna(value)
+Loại bỏ các cột không cần thiết: df.drop(columns=['column_name'])
+Thêm một cột mới: df['new_column'] = values
+Sắp xếp dữ liệu theo giá trị của một cột: df.sort_values(by='column_name')
+Truy vấn dữ liệu:
+
+Lọc dữ liệu dựa trên điều kiện: df[df['column_name'] > value]
+Lựa chọn các hàng dựa trên điều kiện: df.loc[condition]
+Truy xuất dữ liệu theo vị trí: df.iloc[row_index, column_index]
+Tính toán và biến đổi dữ liệu:
+
+Tính tổng các giá trị của một cột: df['column_name'].sum()
+Tính trung bình của một cột: df['column_name'].mean()
+Groupby và tính tổng/mean/...: df.groupby('column_name').sum()
+Áp dụng hàm cho từng phần tử trong một cột: df['column_name'].apply(function)
+Thống kê và trực quan hóa dữ liệu:
+
+Tính số lượng giá trị duy nhất trong một cột: df['column_name'].nunique()
+Tạo biểu đồ đường: df.plot(x='column_name', y='column_name', kind='line')
+Tạo biểu đồ cột: df.plot(x='column_name', y='column_name', kind='bar')
+Tạo biểu đồ hộp (boxplot): df.boxplot(column='column_name')

@@ -1,0 +1,48 @@
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, GradientBoostingClassifier, GradientBoostingRegressor
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.decomposition import PCA
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, mean_squared_error, r2_score
+from sklearn.cluster import KMeans
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
+from sklearn.manifold import LocallyLinearEmbedding
+
+Huấn luyện và đánh giá mô hình:
+
+Chia dữ liệu thành tập huấn luyện và tập kiểm tra: train_test_split(X, y, test_size=0.2, random_state=42)
+Khởi tạo mô hình hồi quy tuyến tính: LinearRegression()
+Khởi tạo mô hình hồi quy logistic: LogisticRegression()
+Khởi tạo mô hình cây quyết định: DecisionTreeClassifier(), DecisionTreeRegressor()
+Khởi tạo mô hình Random Forest: RandomForestClassifier(), RandomForestRegressor()
+Khởi tạo mô hình Gradient Boosting: GradientBoostingClassifier(), GradientBoostingRegressor()
+Huấn luyện mô hình trên dữ liệu: model.fit(X_train, y_train)
+Đánh giá mô hình trên tập kiểm tra: model.score(X_test, y_test)
+Dự đoán đầu ra với mô hình đã huấn luyện: model.predict(X)
+Tiền xử lý dữ liệu:
+
+Tiêu chuẩn hóa dữ liệu: StandardScaler()
+Mã hóa biến hạng mục: OneHotEncoder(), LabelEncoder()
+Xử lý giá trị NaN: SimpleImputer(strategy='mean'), SimpleImputer(strategy='median')
+Giảm chiều dữ liệu: PCA(), TruncatedSVD()
+Rời rạc hóa dữ liệu số: KBinsDiscretizer()
+Đánh giá và tinh chỉnh mô hình:
+
+Chia tập dữ liệu thành các fold: KFold(n_splits=5, shuffle=True, random_state=42)
+Đánh giá mô hình theo cross-validation: cross_val_score(estimator, X, y, cv=kfold)
+Tìm kiếm siêu tham số tốt nhất: GridSearchCV(estimator, param_grid)
+Đánh giá mô hình theo các độ đo: accuracy_score(), precision_score(), recall_score(), f1_score(), mean_squared_error(), r2_score()
+Clustering và phân nhóm:
+
+Khởi tạo mô hình K-Means: KMeans(n_clusters=k)
+Phân loại dữ liệu thành các nhóm: model.fit(X)
+Xác định nhãn nhóm cho các điểm dữ liệu: model.labels_
+Giảm kích thước dữ liệu:
+
+Mô hình t-SNE: TSNE(n_components=2)
+Mô hình PCA: PCA(n_components=2)
+Mô hình LLE: LocallyLinearEmbedding(n_components=2)
